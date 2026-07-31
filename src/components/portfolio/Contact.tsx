@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { Github, Linkedin, Mail, MapPin, Send } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { z } from "zod";
 import { toast } from "sonner";
-import { profile } from "@/config/profile";
+import { profile, sectionCopy } from "@/config/profile";
 import { Reveal, Section } from "./Section";
 
 const contactSchema = z.object({
@@ -15,12 +16,30 @@ const contactSchema = z.object({
     .max(1000, "Message must be under 1000 characters"),
 });
 
-const details = [
-  { label: "Email", value: profile.email, href: `mailto:${profile.email}`, Icon: Mail },
-  { label: "GitHub", value: profile.github.replace(/^https?:\/\//, ""), href: profile.github, Icon: Github },
-  { label: "LinkedIn", value: profile.linkedin.replace(/^https?:\/\//, ""), href: profile.linkedin, Icon: Linkedin },
-  { label: "Location", value: profile.location, href: undefined, Icon: MapPin },
-];
+type Detail = { label: string; value: string; href?: string; Icon: LucideIcon };
+
+const details: Detail[] = [
+  profile.email && {
+    label: "Email",
+    value: profile.email,
+    href: `mailto:${profile.email}`,
+    Icon: Mail,
+  },
+  profile.phone && { label: "Phone", value: profile.phone, href: `tel:${profile.phone}`, Icon: Phone },
+  profile.github && {
+    label: "GitHub",
+    value: profile.github.replace(/^https?:\/\//, ""),
+    href: profile.github,
+    Icon: Github,
+  },
+  profile.linkedin && {
+    label: "LinkedIn",
+    value: profile.linkedin.replace(/^https?:\/\//, ""),
+    href: profile.linkedin,
+    Icon: Linkedin,
+  },
+  profile.location && { label: "Location", value: profile.location, Icon: MapPin },
+].filter(Boolean) as Detail[];
 
 const inputClass =
   "w-full rounded-xl border border-border bg-surface/70 px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary/60 focus:ring-2 focus:ring-ring/25";
@@ -46,7 +65,9 @@ export function Contact() {
 
     setErrors({});
     const subject = encodeURIComponent(`Portfolio enquiry from ${result.data.name}`);
-    const body = encodeURIComponent(`${result.data.message}\n\n— ${result.data.name} (${result.data.email})`);
+    const body = encodeURIComponent(
+      `${result.data.message}\n\n— ${result.data.name} (${result.data.email})`,
+    );
     window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`;
     toast.success("Opening your email client…");
     form.reset();
@@ -55,22 +76,24 @@ export function Contact() {
   return (
     <Section
       id="contact"
-      eyebrow="Contact"
-      title="Let's build something"
-      description="Open to internships, graduate roles, freelance work and collaboration on AI-driven products."
+      eyebrow={sectionCopy.contact.eyebrow}
+      title={sectionCopy.contact.title}
+      description={sectionCopy.contact.description}
     >
       <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
         <Reveal>
           <div className="glass h-full rounded-3xl p-6 shadow-soft sm:p-8">
-            <h3 className="text-lg font-semibold">Contact details</h3>
+            <h3 className="text-lg font-semibold tracking-tight">Contact details</h3>
             <ul className="mt-6 space-y-4">
               {details.map(({ label, value, href, Icon }) => (
                 <li key={label} className="flex min-w-0 items-start gap-3">
                   <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-accent text-primary">
-                    <Icon className="h-4.5 w-4.5" />
+                    <Icon className="h-[1.15rem] w-[1.15rem]" />
                   </span>
                   <div className="min-w-0">
-                    <p className="text-xs uppercase tracking-widest text-muted-foreground">{label}</p>
+                    <p className="text-xs uppercase tracking-widest text-muted-foreground">
+                      {label}
+                    </p>
                     {href ? (
                       <a
                         href={href}
@@ -101,8 +124,18 @@ export function Contact() {
                 <label htmlFor="name" className="mb-2 block text-sm font-medium">
                   Name
                 </label>
-                <input id="name" name="name" maxLength={100} className={inputClass} placeholder="Your name" />
-                {errors.name ? <p className="mt-1.5 text-xs text-destructive">{errors.name}</p> : null}
+                <input
+                  id="name"
+                  name="name"
+                  maxLength={100}
+                  autoComplete="name"
+                  aria-invalid={Boolean(errors.name)}
+                  className={inputClass}
+                  placeholder="Your name"
+                />
+                {errors.name ? (
+                  <p className="mt-1.5 text-xs text-destructive">{errors.name}</p>
+                ) : null}
               </div>
               <div>
                 <label htmlFor="email" className="mb-2 block text-sm font-medium">
@@ -113,10 +146,14 @@ export function Contact() {
                   name="email"
                   type="email"
                   maxLength={255}
+                  autoComplete="email"
+                  aria-invalid={Boolean(errors.email)}
                   className={inputClass}
                   placeholder="you@example.com"
                 />
-                {errors.email ? <p className="mt-1.5 text-xs text-destructive">{errors.email}</p> : null}
+                {errors.email ? (
+                  <p className="mt-1.5 text-xs text-destructive">{errors.email}</p>
+                ) : null}
               </div>
             </div>
 
@@ -129,6 +166,7 @@ export function Contact() {
                 name="message"
                 rows={6}
                 maxLength={1000}
+                aria-invalid={Boolean(errors.message)}
                 className={`${inputClass} resize-none`}
                 placeholder="Tell me about the role, project or idea…"
               />
