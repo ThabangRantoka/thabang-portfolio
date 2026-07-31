@@ -26,15 +26,17 @@ export function Certifications() {
                 {cert.name}
               </h3>
               <p className="mt-1 text-sm text-muted-foreground">{cert.issuer}</p>
-              <a
-                href={cert.url}
-                target={cert.url.startsWith("http") ? "_blank" : undefined}
-                rel="noreferrer"
-                className="mt-auto inline-flex items-center justify-center gap-2 rounded-xl border border-border bg-surface/70 px-4 py-2.5 pt-2.5 text-sm font-semibold text-foreground transition-colors hover:border-primary/40 hover:bg-accent"
-                style={{ marginTop: "1.5rem" }}
-              >
-                View Certificate <ExternalLink className="h-3.5 w-3.5" />
-              </a>
+              <div className="mt-auto pt-6">
+                <a
+                  href={cert.url}
+                  target={cert.url.startsWith("http") ? "_blank" : undefined}
+                  rel="noreferrer"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-border bg-surface/70 px-4 py-2.5 text-sm font-semibold text-foreground transition-colors hover:border-primary/40 hover:bg-accent"
+                >
+                  View Certificate <ExternalLink className="h-3.5 w-3.5" />
+                </a>
+              </div>
+
             </div>
           </Reveal>
         ))}
