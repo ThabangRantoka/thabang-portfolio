@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
-import { initials } from "@/config/profile";
+import { initials, profile } from "@/config/profile";
 
-/** Circular gradient avatar built purely from the profile initials. */
+/** Circular avatar — uses the profile photo when set, otherwise the initials. */
 export function InitialsAvatar({
   size = "lg",
   className,
@@ -11,6 +11,7 @@ export function InitialsAvatar({
 }) {
   const dimensions = size === "lg" ? "h-44 w-44 sm:h-56 sm:w-56" : "h-10 w-10";
   const textSize = size === "lg" ? "text-5xl sm:text-6xl" : "text-sm";
+  const photo = profile.photoUrl as string;
 
   return (
     <div className={cn("relative grid place-items-center", className)}>
@@ -29,19 +30,29 @@ export function InitialsAvatar({
       ) : null}
       <div
         className={cn(
-          "relative grid place-items-center rounded-full gradient-brand shadow-glow ring-1 ring-primary/30",
+          "relative grid place-items-center overflow-hidden rounded-full gradient-brand shadow-glow ring-1 ring-primary/30",
           dimensions,
         )}
       >
-        <span
-          className={cn(
-            "font-display font-bold tracking-tight text-primary-foreground",
-            textSize,
-          )}
-        >
-          {initials}
-        </span>
+        {photo ? (
+          <img
+            src={photo}
+            alt={`Portrait of ${profile.name}`}
+            loading={size === "lg" ? "eager" : "lazy"}
+            className="h-full w-full object-cover object-top"
+          />
+        ) : (
+          <span
+            className={cn(
+              "font-display font-bold tracking-tight text-primary-foreground",
+              textSize,
+            )}
+          >
+            {initials}
+          </span>
+        )}
       </div>
     </div>
   );
 }
+
