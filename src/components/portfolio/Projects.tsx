@@ -74,7 +74,7 @@ export function Projects() {
                 ) : null}
                 {!project.liveUrl && !project.repoUrl ? (
                   <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-transform duration-200 group-hover:translate-x-0.5">
-                    {project.status === "Coming Soon" ? "In development" : "Case study soon"}
+                    {String(project.status) === "Coming Soon" ? "In development" : "Case study soon"}
                     <ArrowUpRight className="h-4 w-4" />
                   </span>
                 ) : null}

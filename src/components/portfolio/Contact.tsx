@@ -32,10 +32,10 @@ const details: Detail[] = [
     href: profile.github,
     Icon: Github,
   },
-  profile.linkedin && {
+  (profile.linkedin as string) && {
     label: "LinkedIn",
-    value: profile.linkedin.replace(/^https?:\/\//, ""),
-    href: profile.linkedin,
+    value: (profile.linkedin as string).replace(/^https?:\/\//, ""),
+    href: profile.linkedin as string,
     Icon: Linkedin,
   },
   profile.location && { label: "Location", value: profile.location, Icon: MapPin },

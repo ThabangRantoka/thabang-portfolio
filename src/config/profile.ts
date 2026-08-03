@@ -6,37 +6,43 @@
  *  Change a value here and it updates everywhere automatically.
  */
 
+import cvAsset from "@/assets/cv.pdf.asset.json";
+import photoAsset from "@/assets/thabang-profile.jpg.asset.json";
+
 export const profile = {
   /* ---------- Identity ---------- */
-  name: "Thabang Rantoka",
-  title: "Computer Systems Engineering Student",
-  subtitle: "AI & Software Developer",
-  location: "Pretoria, South Africa",
+  name: "Moyahabo Thabang Rantoka",
+  title: "Final-Year Computer Systems Engineering Student",
+  subtitle: "Embedded Systems & Software Developer",
+  location: "Pretoria, Gauteng, South Africa",
 
   /* ---------- Contact & links ---------- */
-  email: "your@email.com",
-  phone: "", // optional — leave "" to hide
-  github: "https://github.com/yourusername",
-  linkedin: "https://linkedin.com/in/yourprofile",
+  email: "thabangrantoka@gmail.com",
+  phone: "076 364 9536", // optional — leave "" to hide
+  github: "https://github.com/ThabangRantoka",
+  linkedin: "", // optional — add your LinkedIn URL to show it
+  website: "https://thabangrantoka.github.io/portfolio/",
+
+  /* ---------- Photo ---------- */
+  photoUrl: photoAsset.url,
 
   /* ---------- CV ---------- */
-  // Put your PDF in the `public` folder and set this to "/cv.pdf"
-  cvUrl: "#",
+  cvUrl: cvAsset.url,
 
   /* ---------- Hero ---------- */
-  availability: "Available for internships & collaboration",
+  availability: "Available for internships, graduate roles & collaboration",
   summary:
-    "I build intelligent applications at the intersection of Artificial Intelligence, web technologies and software engineering — turning ideas into fast, reliable products while constantly learning the tools that define modern development.",
+    "Final-year Computer Systems Engineering student at Tshwane University of Technology with hands-on project experience in embedded systems, automation, robotics, machine learning and software applications — building systems that bridge hardware and clean, reliable code.",
 
   /* ---------- About ---------- */
   bio: [
-    "I'm a Computer Systems Engineering student with a deep passion for Artificial Intelligence and the craft of software development. What drives me is problem solving: breaking a messy, real-world challenge into clean, elegant systems that people actually enjoy using.",
-    "My work spans modern web development — React, TypeScript and Tailwind CSS — and applied AI, from prompt engineering and automation to building assistants that remove busywork from everyday workflows.",
-    "I treat continuous learning as part of the job. Every project is an excuse to go deeper, ship something real, and raise the bar on the next one.",
+    "I'm a final-year Computer Systems Engineering student at Tshwane University of Technology, working across embedded systems, automation, robotics and software development.",
+    "My project work ranges from a Raspberry Pi home-automation system and a PCB-based fire detection board to Unity ML-Agents training and a C++ municipal billing system — hardware and software, end to end.",
+    "I'm keen to pursue a career in system development, embedded systems, electronics and software engineering, and I treat every build as a chance to go deeper and raise the bar on the next one.",
   ],
 
   /* ---------- Footer ---------- */
-  footerTagline: "Built with React, Tailwind CSS and AI.",
+  footerTagline: "Built with React, TypeScript and Tailwind CSS.",
 } as const;
 
 /** Initials are derived from `profile.name` — first + last letter. */
@@ -64,34 +70,35 @@ export const navItems = [
 export const sectionCopy = {
   about: {
     eyebrow: "About",
-    title: "Engineering curiosity into working software",
+    title: "Engineering curiosity into working systems",
   },
   skills: {
     eyebrow: "Skills",
     title: "The stack I build with",
-    description: "Languages, frameworks and AI tooling I use to design, build and ship.",
+    description:
+      "Programming languages, hardware platforms and tools I use to design, build and ship.",
   },
   projects: {
     eyebrow: "Projects",
     title: "Selected work",
     description:
-      "Products built to solve real problems — from applied AI assistants to polished web interfaces.",
+      "Embedded, robotics and software projects built through my engineering studies.",
   },
   education: {
     eyebrow: "Education",
-    title: "Academic & professional training",
-    description: "Formal engineering study paired with applied AI programmes.",
+    title: "Academic background",
+    description: "Formal engineering study with a strong systems and electronics foundation.",
   },
   certifications: {
     eyebrow: "Certifications",
-    title: "Credentials & continuous learning",
-    description: "Verified programmes in generative AI, responsible AI practice and developer tooling.",
+    title: "Certificates & licences",
+    description: "Credentials and continuous learning alongside my qualification.",
   },
   contact: {
     eyebrow: "Contact",
     title: "Let's build something",
     description:
-      "Open to internships, graduate roles, freelance work and collaboration on AI-driven products.",
+      "Open to internships, graduate roles and collaboration on embedded, robotics and software projects.",
   },
 } as const;
 
@@ -99,34 +106,34 @@ export const sectionCopy = {
 /** icon options: brain | code | lightbulb | globe | graduation | rocket | sparkles | wrench */
 export const strengths = [
   {
+    icon: "wrench",
+    title: "Embedded Systems",
+    description: "Microcontrollers, sensors, PCB logic and Raspberry Pi / Arduino builds.",
+  },
+  {
+    icon: "rocket",
+    title: "Automation & Robotics",
+    description: "Obstacle avoidance, wall-following and remote device control systems.",
+  },
+  {
     icon: "brain",
-    title: "Artificial Intelligence",
-    description: "Applied AI, prompt engineering and automation that removes real friction.",
+    title: "Machine Learning",
+    description: "Unity ML-Agents training and applied AI experimentation.",
   },
   {
     icon: "code",
     title: "Software Development",
-    description: "Clean, typed, maintainable code with a bias toward shipping.",
-  },
-  {
-    icon: "lightbulb",
-    title: "Problem Solving",
-    description: "Decomposing messy problems into systems that hold up under pressure.",
+    description: "C++, Python, JavaScript and SQL — clean, maintainable, tested code.",
   },
   {
     icon: "globe",
     title: "Web Development",
-    description: "Responsive, accessible interfaces built with React and Tailwind CSS.",
+    description: "Responsive interfaces with HTML, CSS, JavaScript and Flask back-ends.",
   },
   {
-    icon: "graduation",
-    title: "Continuous Learning",
-    description: "Always mid-course, mid-build, mid-experiment — never standing still.",
-  },
-  {
-    icon: "rocket",
-    title: "Real-World Solutions",
-    description: "Projects measured by the value they create, not the lines of code.",
+    icon: "lightbulb",
+    title: "Problem Solving",
+    description: "Analytical thinking, fast learning and calm debugging under pressure.",
   },
 ] as const;
 
@@ -135,28 +142,29 @@ export const skillGroups = [
   {
     category: "Programming",
     icon: "code",
-    skills: ["C++", "Java", "JavaScript", "PHP", "Python"],
+    skills: ["C++", "Python", "JavaScript", "SQL", "PHP"],
   },
   {
     category: "Web",
     icon: "globe",
-    skills: ["HTML5", "CSS3", "React", "Tailwind CSS"],
+    skills: ["HTML5", "CSS3", "Flask", "Databases"],
   },
   {
-    category: "AI",
+    category: "Engineering",
     icon: "sparkles",
     skills: [
-      "ChatGPT",
-      "Prompt Engineering",
-      "Google AI Essentials",
-      "AI Productivity",
-      "AI Automation",
+      "Embedded Systems",
+      "Electronics",
+      "Mobile Robotics",
+      "PLCs",
+      "Digital Process Control",
+      "Machine Learning",
     ],
   },
   {
     category: "Tools",
     icon: "wrench",
-    skills: ["Git", "GitHub", "Linux", "VS Code", "Bolt.new", "Lovable", "Vercel"],
+    skills: ["Git", "GitHub", "Raspberry Pi", "Arduino", "Unity ML-Agents", "MS Word", "MS Excel"],
   },
 ] as const;
 
@@ -164,43 +172,62 @@ export const skillGroups = [
 /** Set `liveUrl` / `repoUrl` to "" to hide that button. */
 export const projects = [
   {
-    name: "ProductivityOS AI",
-    status: "Live",
+    name: "Raspberry Pi Home Automation",
+    status: "Completed",
     description:
-      "An AI-powered workplace productivity assistant that consolidates the everyday knowledge work of a modern team into one intelligent workspace.",
-    features: [
-      "AI Email Generator",
-      "Meeting Notes Summarizer",
-      "AI Task Planner",
-      "AI Research Assistant",
-      "AI Chat Interface",
-    ],
-    tech: ["React", "TypeScript", "Tailwind CSS", "AI APIs"],
+      "A Raspberry Pi-based home automation system using Flask, Python and GPIO-controlled relays to remotely control electrical devices from a web interface.",
+    features: ["Flask web interface", "GPIO relay control", "Remote device switching"],
+    tech: ["Python", "Flask", "Raspberry Pi", "GPIO"],
     liveUrl: "",
     repoUrl: "",
   },
   {
-    name: "Professional Personal Portfolio",
-    status: "Live",
+    name: "PCB Fire Detection System",
+    status: "Completed",
     description:
-      "This site — a fully responsive, accessible portfolio driven by a single configuration file, with semantic design tokens, scroll-reveal motion and a dark/light theme engine.",
-    features: [
-      "Config-driven content",
-      "Dark / light theming",
-      "Scroll reveal motion",
-      "SEO ready",
-    ],
-    tech: ["React", "TypeScript", "Tailwind CSS"],
+      "A PCB-based fire detection system built around sensor input and microcontroller logic for early warning in enclosed spaces.",
+    features: ["Custom PCB design", "Sensor integration", "Microcontroller logic"],
+    tech: ["Electronics", "PCB Design", "Embedded C"],
     liveUrl: "",
     repoUrl: "",
   },
   {
-    name: "Future AI Project",
-    status: "Coming Soon",
+    name: "Ultrasonic Distance Measurement",
+    status: "Completed",
     description:
-      "A next applied-AI build currently in research and design. Focused on automation, reasoning workflows and measurable real-world impact.",
-    features: ["In research", "Applied AI", "Automation"],
-    tech: ["Python", "AI APIs"],
+      "An Arduino-based ultrasonic distance measurement system with sensor accuracy analysis for real-time obstacle detection.",
+    features: ["Real-time sensing", "Accuracy analysis", "Obstacle detection"],
+    tech: ["Arduino", "C++", "Sensors"],
+    liveUrl: "",
+    repoUrl: "",
+  },
+  {
+    name: "ML Stealth Navigation Agent",
+    status: "Completed",
+    description:
+      "A Unity ML-Agents model trained for autonomous stealth navigation, using reinforcement learning to reach goals while avoiding detection.",
+    features: ["Reinforcement learning", "Autonomous navigation", "Simulation training"],
+    tech: ["Unity", "ML-Agents", "Python"],
+    liveUrl: "",
+    repoUrl: "",
+  },
+  {
+    name: "Autonomous Mobile Robot",
+    status: "Completed",
+    description:
+      "Obstacle-avoidance and wall-following logic implemented on a mobile robot platform for reliable autonomous movement.",
+    features: ["Obstacle avoidance", "Wall following", "Sensor fusion"],
+    tech: ["Robotics", "C++", "Sensors"],
+    liveUrl: "",
+    repoUrl: "",
+  },
+  {
+    name: "Municipal Billing System",
+    status: "Completed",
+    description:
+      "A C++ municipal billing system automating customer billing, tariff calculations and account management processes.",
+    features: ["Tariff calculation", "Account management", "Automated billing"],
+    tech: ["C++", "Data Structures"],
     liveUrl: "",
     repoUrl: "",
   },
@@ -210,34 +237,25 @@ export const projects = [
 export const education = [
   {
     institution: "Tshwane University of Technology",
-    qualification: "Computer Systems Engineering",
-    period: "",
+    qualification: "Diploma in Computer Systems Engineering",
+    period: "Jan 2022 – Dec 2026",
     detail:
-      "Core engineering foundations: programming, computer architecture, networks, electronics and systems design.",
+      "Key modules: Software Engineering, Embedded Systems, Programming, Artificial Intelligence, Network Systems, Mobile Robotics, Databases, Digital Process Control, PLCs, Electronics, Operating Systems, Logic Design and Project Design.",
   },
   {
-    institution: "AI Skills Acceleration Programme",
-    qualification: "Applied Artificial Intelligence",
-    period: "",
+    institution: "George Tladi Technical High School",
+    qualification: "National Senior Certificate (Grade 12)",
+    period: "Jan 2016 – Dec 2020",
     detail:
-      "Intensive programme covering practical AI adoption, automation workflows and responsible deployment.",
-  },
-  {
-    institution: "Google",
-    qualification: "Google AI Essentials",
-    period: "",
-    detail:
-      "Foundations of generative AI, prompt design and using AI responsibly to accelerate everyday work.",
+      "Key subjects: Mathematics, Physical Sciences, Mechanical Technology and Engineering Graphics & Design.",
   },
 ] as const;
 
 /* ---------- Certifications ---------- */
 /** Set `url` to your credential link — "#" keeps the button as a placeholder. */
 export const certifications = [
-  { name: "Google AI Essentials", issuer: "Google", year: "", url: "#" },
-  { name: "Introduction to Generative AI", issuer: "Google Cloud", year: "", url: "#" },
-  { name: "Prompt Engineering", issuer: "Professional Certificate", year: "", url: "#" },
-  { name: "Responsible AI", issuer: "Google Cloud", year: "", url: "#" },
-  { name: "AI Productivity", issuer: "Professional Certificate", year: "", url: "#" },
-  { name: "Git & GitHub", issuer: "Developer Certificate", year: "", url: "#" },
+  { name: "Code 10 Driver's Licence", issuer: "Department of Transport", year: "", url: "#" },
 ] as const;
+
+/* ---------- Languages ---------- */
+export const languages = ["English", "Sepedi", "isiZulu"] as const;
