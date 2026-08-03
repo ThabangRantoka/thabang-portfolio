@@ -39,8 +39,7 @@ export function InitialsAvatar({
             src={photo}
             alt={`Portrait of ${profile.name}`}
             loading={size === "lg" ? "eager" : "lazy"}
-            style={{ objectPosition: "48% 30%" }}
-            className="h-full w-full scale-[2.1] object-cover"
+            className="h-full w-full object-cover object-center"
           />
         ) : (
           <span
