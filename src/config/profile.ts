@@ -20,7 +20,7 @@ export const profile = {
   email: "thabangrantoka@gmail.com",
   phone: "076 364 9536", // optional — leave "" to hide
   github: "https://github.com/ThabangRantoka",
-  linkedin: "", // optional — add your LinkedIn URL to show it
+  linkedin: "https://www.linkedin.com/in/moyahabo-thabang-95a036275",
   website: "https://thabangrantoka.github.io/portfolio/",
 
   /* ---------- Photo ---------- */
@@ -154,6 +154,8 @@ export const skillGroups = [
     icon: "sparkles",
     skills: [
       "Embedded Systems",
+      "8051 Microcontrollers",
+      "Assembly",
       "Electronics",
       "Mobile Robotics",
       "PLCs",
@@ -164,13 +166,42 @@ export const skillGroups = [
   {
     category: "Tools",
     icon: "wrench",
-    skills: ["Git", "GitHub", "Raspberry Pi", "Arduino", "Unity ML-Agents", "MS Word", "MS Excel"],
+    skills: [
+      "Git",
+      "GitHub",
+      "Raspberry Pi",
+      "Arduino",
+      "ESP32",
+      "Proteus",
+      "Embarcadero C++ Builder",
+      "Unity ML-Agents",
+    ],
   },
 ] as const;
 
 /* ---------- Projects ---------- */
 /** Set `liveUrl` / `repoUrl` to "" to hide that button. */
 export const projects = [
+  {
+    name: "Program Manager Web Application",
+    status: "Completed",
+    description:
+      "A responsive Program Manager web application built with HTML, CSS and JavaScript, featuring LocalStorage persistence, search, edit/delete actions and a modern UI.",
+    features: ["LocalStorage persistence", "Search & filtering", "Edit / delete records"],
+    tech: ["HTML5", "CSS3", "JavaScript"],
+    liveUrl: "",
+    repoUrl: "https://github.com/ThabangRantoka/Program-Manager-Web-Application",
+  },
+  {
+    name: "ESP32 Smart Home Automation",
+    status: "Completed",
+    description:
+      "An ESP32-based smart home automation system running a built-in web server for wireless control of room lighting from any device on the network.",
+    features: ["ESP32 web server", "Wireless light control", "Responsive control UI"],
+    tech: ["ESP32", "C++", "Embedded Web Server"],
+    liveUrl: "",
+    repoUrl: "https://github.com/ThabangRantoka/ESP32-Smart-Home-Automation-System",
+  },
   {
     name: "Raspberry Pi Home Automation",
     status: "Completed",
@@ -225,11 +256,11 @@ export const projects = [
     name: "Municipal Billing System",
     status: "Completed",
     description:
-      "A C++ municipal billing system automating customer billing, tariff calculations and account management processes.",
+      "A desktop Municipal Billing System developed in C++ (Embarcadero C++ Builder) for managing customer billing information, tariffs and service accounts.",
     features: ["Tariff calculation", "Account management", "Automated billing"],
-    tech: ["C++", "Data Structures"],
+    tech: ["C++", "C++ Builder", "Data Structures"],
     liveUrl: "",
-    repoUrl: "",
+    repoUrl: "https://github.com/ThabangRantoka/Municipal-Billing-System",
   },
 ] as const;
 
