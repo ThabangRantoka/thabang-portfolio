@@ -183,6 +183,26 @@ export const skillGroups = [
 /** Set `liveUrl` / `repoUrl` to "" to hide that button. */
 export const projects = [
   {
+    name: "Program Manager Web Application",
+    status: "Completed",
+    description:
+      "A responsive Program Manager web application built with HTML, CSS and JavaScript, featuring LocalStorage persistence, search, edit/delete actions and a modern UI.",
+    features: ["LocalStorage persistence", "Search & filtering", "Edit / delete records"],
+    tech: ["HTML5", "CSS3", "JavaScript"],
+    liveUrl: "",
+    repoUrl: "https://github.com/ThabangRantoka/Program-Manager-Web-Application",
+  },
+  {
+    name: "ESP32 Smart Home Automation",
+    status: "Completed",
+    description:
+      "An ESP32-based smart home automation system running a built-in web server for wireless control of room lighting from any device on the network.",
+    features: ["ESP32 web server", "Wireless light control", "Responsive control UI"],
+    tech: ["ESP32", "C++", "Embedded Web Server"],
+    liveUrl: "",
+    repoUrl: "https://github.com/ThabangRantoka/ESP32-Smart-Home-Automation-System",
+  },
+  {
     name: "Raspberry Pi Home Automation",
     status: "Completed",
     description:
