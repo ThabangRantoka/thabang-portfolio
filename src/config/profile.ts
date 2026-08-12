@@ -154,6 +154,8 @@ export const skillGroups = [
     icon: "sparkles",
     skills: [
       "Embedded Systems",
+      "8051 Microcontrollers",
+      "Assembly",
       "Electronics",
       "Mobile Robotics",
       "PLCs",
@@ -164,7 +166,16 @@ export const skillGroups = [
   {
     category: "Tools",
     icon: "wrench",
-    skills: ["Git", "GitHub", "Raspberry Pi", "Arduino", "Unity ML-Agents", "MS Word", "MS Excel"],
+    skills: [
+      "Git",
+      "GitHub",
+      "Raspberry Pi",
+      "Arduino",
+      "ESP32",
+      "Proteus",
+      "Embarcadero C++ Builder",
+      "Unity ML-Agents",
+    ],
   },
 ] as const;
 
