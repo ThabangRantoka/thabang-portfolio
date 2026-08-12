@@ -20,7 +20,7 @@ export const profile = {
   email: "thabangrantoka@gmail.com",
   phone: "076 364 9536", // optional — leave "" to hide
   github: "https://github.com/ThabangRantoka",
-  linkedin: "", // optional — add your LinkedIn URL to show it
+  linkedin: "https://www.linkedin.com/in/moyahabo-thabang-95a036275",
   website: "https://thabangrantoka.github.io/portfolio/",
 
   /* ---------- Photo ---------- */
