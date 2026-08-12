@@ -256,11 +256,11 @@ export const projects = [
     name: "Municipal Billing System",
     status: "Completed",
     description:
-      "A C++ municipal billing system automating customer billing, tariff calculations and account management processes.",
+      "A desktop Municipal Billing System developed in C++ (Embarcadero C++ Builder) for managing customer billing information, tariffs and service accounts.",
     features: ["Tariff calculation", "Account management", "Automated billing"],
-    tech: ["C++", "Data Structures"],
+    tech: ["C++", "C++ Builder", "Data Structures"],
     liveUrl: "",
-    repoUrl: "",
+    repoUrl: "https://github.com/ThabangRantoka/Municipal-Billing-System",
   },
 ] as const;
 
