@@ -153,3 +153,73 @@
     animation: none;
   }
 }
+
+
+/* =========================================
+   3D PHOTO ROTATION
+   ========================================= */
+.photo-3d {
+  perspective: 1100px;
+  perspective-origin: 50% 40%;
+  cursor: grab;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.photo-3d:focus-visible .photo-card {
+  outline: 2px solid var(--mint);
+  outline-offset: 6px;
+}
+
+/* JS sets --rx / --ry / --rz each frame; no-JS fallback is a 2deg tilt */
+.photo-3d .photo-card {
+  transform-style: preserve-3d;
+  transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) rotate(var(--rz, 2deg));
+  will-change: transform;
+  position: relative;
+}
+
+/* Depth */
+.photo-3d .photo-frame {
+  position: relative;
+  transform: translateZ(28px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+.photo-3d .photo-footer { transform: translateZ(14px); }
+
+/* Light reflection that follows the pointer */
+.photo-glare {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at var(--gx, 30%) var(--gy, 20%),
+    rgba(255, 255, 255, 0.22),
+    rgba(255, 255, 255, 0) 55%
+  );
+  mix-blend-mode: soft-light;
+}
+
+.photo-3d.is-active { cursor: grabbing; }
+.floating-chip { z-index: 6; }
+
+/* Smile: second photo fades in on hover/focus/spin (only if profile-smile.png exists) */
+.photo-frame .photo-smile {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center 24%;
+  opacity: 0;
+  transition: opacity .45s ease;
+}
+.photo-3d.has-smile:hover .photo-smile,
+.photo-3d.has-smile:focus-visible .photo-smile,
+.photo-3d.has-smile.is-smiling .photo-smile { opacity: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .photo-frame .photo-smile { transition: none; }
+  .photo-3d .photo-card { transform: rotate(2deg); }
+}
