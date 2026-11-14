@@ -231,3 +231,8 @@
 .cert-link:hover{text-decoration:underline}
 @media(max-width:900px){.credential-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:680px){.credential-grid{grid-template-columns:1fr}}
+
+/* Experience links */
+.exp-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.exp-links a{display:inline-block;padding:10px 16px;border:1px solid var(--mint);border-radius:10px;color:var(--mint);font-size:14px;font-weight:700;transition:background .2s,color .2s}
+.exp-links a:hover{background:var(--mint);color:#0b1020}
