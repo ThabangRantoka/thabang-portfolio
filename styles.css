@@ -223,3 +223,11 @@
   .photo-frame .photo-smile { transition: none; }
   .photo-3d .photo-card { transform: rotate(2deg); }
 }
+
+/* Certificates */
+.credential-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.credential-grid .skill-card{min-height:0}
+.cert-link{display:inline-block;margin-top:14px;color:var(--mint);font-size:13px;font-weight:700}
+.cert-link:hover{text-decoration:underline}
+@media(max-width:900px){.credential-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:680px){.credential-grid{grid-template-columns:1fr}}
