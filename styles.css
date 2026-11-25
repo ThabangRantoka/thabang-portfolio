@@ -1500,39 +1500,3 @@ footer a {
 
 }
 
-/* CLOUD & DEVOPS PROOF LINKS */
-
-.proof-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.proof-links a {
-  display: inline-flex;
-  align-items: center;
-  padding: 9px 13px;
-  border: 1px solid var(--mint);
-  border-radius: 8px;
-  color: var(--mint);
-  font-size: 11px;
-  font-weight: 700;
-  transition: all 0.25s ease;
-}
-
-.proof-links a:hover {
-  background: var(--mint);
-  color: var(--bg);
-  transform: translateY(-2px);
-}
-
-.cloud-grid .skill-card {
-  display: flex;
-  flex-direction: column;
-  min-height: 260px;
-}
-
-.cloud-grid .skill-card p {
-  flex: 1;
-}
