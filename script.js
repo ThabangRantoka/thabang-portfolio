@@ -1,214 +1,90 @@
 
-// ========================================
-// PREMIUM PORTFOLIO JAVASCRIPT
-// ========================================
+const toggle=document.querySelector('.menu-toggle');const links=document.querySelector('.nav-links');toggle?.addEventListener('click',()=>{const open=links.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'✕':'☰'});links?.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{links.classList.remove('open');toggle?.setAttribute('aria-expanded','false');if(toggle)toggle.textContent='☰'}));document.getElementById('year').textContent=new Date().getFullYear();
 
-document.addEventListener("DOMContentLoaded", () => {
 
-    // MOBILE NAVIGATION
+/* ---------- 3D photo rotation + smile ---------- */
+(function () {
+  const stage = document.getElementById('photo3d');
+  if (!stage) return;
+  const card = stage.querySelector('.photo-card');
 
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
+  // Smile photo: enabled only if profile-smile.png exists next to profile.png
+  const smileImg = stage.querySelector('.photo-smile');
+  if (smileImg) {
+    const probe = new Image();
+    probe.onload = () => { smileImg.hidden = false; stage.classList.add('has-smile'); };
+    probe.src = 'profile-smile.png';
+  }
 
-    function closeMenu() {
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (reduce.matches) return;
 
-        navLinks.classList.remove("open");
+  const MAX_TILT = 16;
+  const SWAY = 12;
+  const EASE = 0.08;
 
-        menuToggle.setAttribute("aria-expanded", "false");
+  let hovering = false;
+  let px = 0, py = 0;
+  let ry = 0, rx = 0;
+  let spin = 0, spinTarget = 0;
+  let visible = true;
+  const start = performance.now();
 
-        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+  stage.addEventListener('pointermove', (e) => {
+    const r = stage.getBoundingClientRect();
+    px = ((e.clientX - r.left) / r.width) * 2 - 1;
+    py = ((e.clientY - r.top) / r.height) * 2 - 1;
+    hovering = true;
+  });
 
+  stage.addEventListener('pointerleave', () => {
+    hovering = false;
+    stage.classList.remove('is-active');
+  });
+
+  stage.addEventListener('pointerdown', () => stage.classList.add('is-active'));
+  stage.addEventListener('pointerup', () => stage.classList.remove('is-active'));
+
+  const doSpin = () => {
+    spinTarget += 360;
+    stage.classList.add('is-smiling');
+    setTimeout(() => stage.classList.remove('is-smiling'), 1800);
+  };
+
+  stage.addEventListener('click', doSpin);
+
+  stage.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      doSpin();
+    }
+  });
+
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver((entries) => {
+      visible = entries[0].isIntersecting;
+    }).observe(stage);
+  }
+
+  function frame(now) {
+    if (visible) {
+      const t = (now - start) / 1000;
+      const targetY = hovering ? px * MAX_TILT : Math.sin(t * 0.9) * SWAY;
+      const targetX = hovering ? -py * MAX_TILT : Math.cos(t * 0.7) * 3;
+
+      ry += (targetY - ry) * EASE;
+      rx += (targetX - rx) * EASE;
+      spin += (spinTarget - spin) * 0.06;
+
+      card.style.setProperty('--ry', (ry + spin).toFixed(2) + 'deg');
+      card.style.setProperty('--rx', rx.toFixed(2) + 'deg');
+      card.style.setProperty('--rz', (hovering ? 0 : 2) + 'deg');
+      card.style.setProperty('--gx', (50 + ry * 2.5) + '%');
+      card.style.setProperty('--gy', (35 - rx * 2.5) + '%');
     }
 
-    menuToggle.addEventListener("click", () => {
-
-        const isOpen = navLinks.classList.toggle("open");
-
-        menuToggle.setAttribute("aria-expanded", String(isOpen));
-
-        menuToggle.innerHTML = isOpen
-            ? '<i class="fas fa-times"></i>'
-            : '<i class="fas fa-bars"></i>';
-
-    });
-
-    document.querySelectorAll(".nav-links a").forEach(link => {
-
-        link.addEventListener("click", closeMenu);
-
-    });
-
-    document.addEventListener("keydown", event => {
-
-        if (event.key === "Escape") {
-            closeMenu();
-        }
-
-    });
-
-    document.addEventListener("click", event => {
-
-        if (
-            !navLinks.contains(event.target) &&
-            !menuToggle.contains(event.target)
-        ) {
-            closeMenu();
-        }
-
-    });
-
-    // AUTOMATIC COPYRIGHT YEAR
-
-    const year = document.getElementById("year");
-
-    if (year) {
-        year.textContent = new Date().getFullYear();
-    }
-
-    // SCROLL REVEAL ANIMATIONS
-
-    const reducedMotion = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-    ).matches;
-
-    const animatedElements = document.querySelectorAll(`
-        .section-heading,
-        .skill-card,
-        .stat-card,
-        .project-card,
-        .academic-card,
-        .experience-card,
-        .pipeline-card,
-        .education-card,
-        .certificate-card
-    `);
-
-    if ("IntersectionObserver" in window && !reducedMotion) {
-
-        const revealObserver = new IntersectionObserver(entries => {
-
-            entries.forEach(entry => {
-
-                if (entry.isIntersecting) {
-
-                    entry.target.classList.add("visible");
-
-                    revealObserver.unobserve(entry.target);
-
-                }
-
-            });
-
-        }, {
-            threshold: 0.08
-        });
-
-        animatedElements.forEach(element => {
-
-            element.classList.add("reveal");
-
-            revealObserver.observe(element);
-
-        });
-
-    }
-
-    // ACTIVE NAVIGATION LINKS
-
-    const sections = document.querySelectorAll("main section[id]");
-
-    const navigationLinks = document.querySelectorAll(".nav-links a");
-
-    function updateActiveNavigation() {
-
-        let currentSection = "home";
-
-        sections.forEach(section => {
-
-            const sectionTop = section.offsetTop;
-
-            if (window.scrollY >= sectionTop - 150) {
-
-                const sectionId = section.getAttribute("id");
-
-                const hasNavigationLink = Array.from(navigationLinks)
-                    .some(link => {
-                        return link.getAttribute("href") === "#" + sectionId;
-                    });
-
-                if (hasNavigationLink) {
-                    currentSection = sectionId;
-                }
-
-            }
-
-        });
-
-        navigationLinks.forEach(link => {
-
-            link.classList.toggle(
-                "active",
-                link.getAttribute("href") === "#" + currentSection
-            );
-
-        });
-
-    }
-
-    // BACK TO TOP BUTTON
-
-    const backToTop = document.getElementById("backToTop");
-
-    function handleScroll() {
-
-        updateActiveNavigation();
-
-        if (backToTop) {
-
-            backToTop.classList.toggle(
-                "show",
-                window.scrollY > 500
-            );
-
-        }
-
-    }
-
-    window.addEventListener("scroll", handleScroll, {
-        passive: true
-    });
-
-    handleScroll();
-
-    if (backToTop) {
-
-        backToTop.addEventListener("click", () => {
-
-            window.scrollTo({
-                top: 0,
-                behavior: reducedMotion ? "auto" : "smooth"
-            });
-
-        });
-
-    }
-
-    // CLOSE MOBILE MENU WHEN RESIZING
-
-    window.addEventListener("resize", () => {
-
-        if (window.innerWidth > 850) {
-
-            closeMenu();
-
-        }
-
-    });
-
-    // PORTFOLIO INITIALIZED
-
-    console.log("Thabang Rantoka | Full Stack Developer Portfolio");
-
-    console.log("Portfolio initialized successfully.");
-
-});
+    requestAnimationFrame(frame);
+  }
+
+  requestAnimationFrame(frame);
+})();
