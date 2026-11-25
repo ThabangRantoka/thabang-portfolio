@@ -1,111 +1,1754 @@
-<div class="cloud-grid">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b1020" />
 
-  <!-- AWS EC2 -->
-  <article class="skill-card">
-    <span class="skill-icon">☁</span>
-    <h3>AWS EC2</h3>
-    <p>
-      Deployed Program Manager on AWS EC2 in the
-      Cape Town region using Linux, Apache, PHP and MySQL.
-    </p>
+  <meta name="description"
+    content="Moyahabo Thabang Rantoka — Full Stack Developer with hands-on experience in software development, AWS, Azure, Docker, Jenkins and CI/CD automation." />
 
-    <div class="proof-links">
-      <a href="https://16.28.168.46/app/"
-         target="_blank" rel="noopener noreferrer">
-        Angular Deployment ↗
+  <title>Thabang Moyahabo Rantoka | Full Stack Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- =========================================
+       NAVIGATION
+       ========================================= -->
+
+  <header class="header">
+    <nav class="nav wrap" aria-label="Main navigation">
+
+      <a class="brand" href="#home">TR<span>.</span></a>
+
+      <button
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-controls="nav-links"
+        aria-label="Toggle navigation">
+        ☰
+      </button>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#cloud">Cloud &amp; DevOps</a>
+        <a href="#engineering">Engineering</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certificates</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <a class="nav-cta"
+         href="mailto:thabangrantoka@gmail.com">
+        Let's talk ↗
       </a>
 
-      <a href="https://16.28.168.46/program-manager/"
-         target="_blank" rel="noopener noreferrer">
-        PHP Deployment ↗
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- =========================================
+         HERO SECTION
+         ========================================= -->
+
+    <section class="hero wrap" id="home">
+
+      <div class="hero-copy">
+
+        <div class="eyebrow">
+          <span class="pulse"></span>
+          Open to Full Stack Developer opportunities
+        </div>
+
+        <p class="intro">
+          Hi, I'm Thabang Rantoka
+          <span aria-hidden="true">👋</span>
+        </p>
+
+        <h1>
+          Building reliable software
+          <span class="gradient">
+            from interface to cloud.
+          </span>
+        </h1>
+
+        <p class="hero-text">
+          Full Stack Developer with one year of professional
+          internship experience. I build responsive applications,
+          REST APIs and relational databases, with hands-on
+          experience in AWS, Azure, Docker and CI/CD automation.
+        </p>
+
+        <div class="actions">
+
+          <a class="btn primary" href="#projects">
+            Explore my work <span>↗</span>
+          </a>
+
+          <a class="btn outline"
+             href="mailto:thabangrantoka@gmail.com">
+            Get in touch
+          </a>
+
+        </div>
+
+        <div class="social">
+
+          <a href="https://github.com/ThabangRantoka"
+             target="_blank"
+             rel="noopener noreferrer">
+            GitHub ↗
+          </a>
+
+          <a href="https://www.linkedin.com/in/moyahabo-thabang-rantoka-95a036275/"
+             target="_blank"
+             rel="noopener noreferrer">
+            LinkedIn ↗
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- PROFILE PICTURE -->
+
+      <div class="hero-visual">
+
+        <div class="photo-3d"
+             id="photo3d"
+             role="img"
+             aria-label="Portrait of Moyahabo Thabang Rantoka. Move your pointer over it to tilt, or click it to spin."
+             tabindex="0">
+
+          <div class="photo-card">
+
+            <div class="photo-frame">
+
+              <img
+                class="photo-main"
+                src="profile.png"
+                alt=""
+                width="900"
+                height="1100"
+              />
+
+              <span class="photo-glare"
+                    aria-hidden="true">
+              </span>
+
+            </div>
+
+            <div class="photo-footer">
+              <span>DEVELOPER / ENGINEER</span>
+              <span>01 — PORTFOLIO</span>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- FLOATING TECHNOLOGY CHIPS -->
+
+        <div class="floating-chip chip-one">
+          &lt;/&gt; Java · Angular
+        </div>
+
+        <div class="floating-chip chip-two">
+          REST API ✓
+        </div>
+
+        <div class="floating-chip chip-Three">
+          Git ✓
+        </div>
+
+        <div class="floating-chip chip-Fouth">
+          PHP ✓
+        </div>
+
+        <div class="floating-chip chip-Five">
+          PostgreSQL ✓
+        </div>
+
+        <div class="floating-chip chip-Six">
+          &lt;/&gt; Node.js · Express
+        </div>
+
+        <div class="floating-chip chip-Seven">
+          TypeScript ✓
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =========================================
+         ABOUT SECTION
+         ========================================= -->
+
+    <section class="section about-section" id="about">
+
+      <div class="wrap about-grid">
+
+        <div>
+
+          <p class="kicker">01 / ABOUT</p>
+
+          <h2>
+            Curious by nature.<br />
+            <span>Driven by building.</span>
+          </h2>
+
+        </div>
+
+        <div>
+
+          <p>
+            I'm a Full Stack Developer based in Pretoria,
+            Gauteng, South Africa, with hands-on experience
+            across frontend development, backend services,
+            databases and application integration.
+          </p>
+
+          <p>
+            During my full-stack internship at MMS Africa,
+            I worked with React, TypeScript, Node.js,
+            PostgreSQL, Postman, Angular, JavaScript, PHP,
+            Linux Server, Git and SQL. I enjoy turning
+            requirements into useful software, debugging
+            challenging problems and collaborating through
+            reviews and feedback.
+          </p>
+
+          <p>
+            My independent cloud and DevOps projects extend
+            this experience into AWS EC2 deployment,
+            GitHub Actions, Jenkins pipelines, Docker Compose
+            and secure webhook integration.
+          </p>
+
+          <div class="mini-stats">
+
+            <div>
+              <strong>1 year</strong>
+              <span>Internship experience</span>
+            </div>
+
+            <div>
+              <strong>10+</strong>
+              <span>Projects &amp; builds</span>
+            </div>
+
+            <div>
+              <strong>Full stack</strong>
+              <span>Frontend to cloud</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =========================================
+         SOFTWARE DEVELOPMENT SKILLS
+         ========================================= -->
+
+    <section class="section wrap" id="skills">
+
+      <div class="section-head">
+
+        <div>
+
+          <p class="kicker">02 / TECH STACK</p>
+
+          <h2>
+            Tools I build with<span class="dot">.</span>
+          </h2>
+
+        </div>
+
+        <p>
+          Practical experience across the development lifecycle.
+        </p>
+
+      </div>
+
+      <div class="skills-grid">
+
+        <!-- PROGRAMMING LANGUAGES -->
+
+        <article class="skill-card">
+
+          <span class="skill-icon">⌘</span>
+
+          <h3>Languages</h3>
+
+          <p>
+            Java · JavaScript · TypeScript · PHP ·
+            Python · C++ · SQL
+          </p>
+
+        </article>
+
+        <!-- BACKEND -->
+
+        <article class="skill-card">
+
+          <span class="skill-icon">◈</span>
+
+          <h3>Backend &amp; APIs</h3>
+
+          <p>
+            Postman · Spring Boot · Node.js · Express.js ·
+            PHP · REST APIs · JSON
+          </p>
+
+        </article>
+
+        <!-- FRONTEND -->
+
+        <article class="skill-card">
+
+          <span class="skill-icon">▣</span>
+
+          <h3>Frontend</h3>
+
+          <p>
+            Angular · React · HTML5 · CSS3 · Bootstrap
+          </p>
+
+        </article>
+
+        <!-- DATABASES -->
+
+        <article class="skill-card">
+
+          <span class="skill-icon">▤</span>
+
+          <h3>Data &amp; Tools</h3>
+
+          <p>
+            MySQL · PostgreSQL · Azure Database for
+            PostgreSQL · Git · Linux · Apache
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- =========================================
+         CLOUD & DEVOPS SECTION
+         ========================================= -->
+
+    <section class="section cloud-section" id="cloud">
+
+      <div class="wrap">
+
+        <div class="section-head">
+
+          <div>
+
+            <p class="kicker">CLOUD / DEVOPS</p>
+
+            <h2>
+              From code to deployment<span class="dot">.</span>
+            </h2>
+
+          </div>
+
+          <p>
+            Hands-on infrastructure, cloud deployment,
+            containerisation and automation experience
+            from independent project builds.
+          </p>
+
+        </div>
+
+        <div class="cloud-grid">
+
+          <!-- AWS EC2 -->
+
+          <article class="skill-card">
+
+            <span class="skill-icon">☁</span>
+
+            <h3>AWS EC2</h3>
+
+            <p>
+              Deployed Program Manager on an AWS EC2 Linux
+              instance in the Cape Town region using Apache,
+              PHP and MySQL. Configured the application
+              environment and deployed the Angular frontend
+              and PHP REST API.
+            </p>
+
+            <div class="proof-links">
+
+              <a href="https://16.28.168.46/app/"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                AWS Angular Deployment ↗
+              </a>
+
+              <a href="https://16.28.168.46/api/index.php"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                AWS REST API ↗
+              </a>
+
+            </div>
+
+          </article>
+
+          <!-- GITHUB ACTIONS -->
+
+          <article class="skill-card">
+
+            <span class="skill-icon">↗</span>
+
+            <h3>GitHub Actions — CI/CD</h3>
+
+            <p>
+              Implemented CI/CD automation for application
+              deployment to AWS EC2 using GitHub Actions,
+              SSH and rsync.
+            </p>
+
+            <div class="proof-links">
+
+              <a href="https://github.com/ThabangRantoka/program-manager-php/actions"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                View GitHub Actions ↗
+              </a>
+
+              <a href="https://github.com/ThabangRantoka/program-manager-php"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                View Repository ↗
+              </a>
+
+            </div>
+
+          </article>
+
+          <!-- JENKINS -->
+
+          <article class="skill-card">
+
+            <span class="skill-icon">⚙</span>
+
+            <h3>Jenkins</h3>
+
+            <p>
+              Configured CI/CD pipelines for automated source
+              checkout, Angular application builds and
+              container deployment using Docker Compose.
+            </p>
+
+            <div class="proof-links">
+
+              <a href="https://github.com/ThabangRantoka/program-manager-php"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                View Project Repository ↗
+              </a>
+
+            </div>
+
+          </article>
+
+          <!-- DOCKER -->
+
+          <article class="skill-card">
+
+            <span class="skill-icon">▣</span>
+
+            <h3>Docker &amp; Docker Compose</h3>
+
+            <p>
+              Containerised full-stack applications and
+              worked with Docker images, containers,
+              networking and multi-container environments
+              using Docker Compose.
+            </p>
+
+            <div class="proof-links">
+
+              <a href="https://github.com/ThabangRantoka/program-manager-php"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                Program Manager Repository ↗
+              </a>
+
+              <a href="https://github.com/ThabangRantoka/StockFlow"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                StockFlow Repository ↗
+              </a>
+
+            </div>
+
+          </article>
+
+          <!-- MICROSOFT AZURE -->
+
+          <article class="skill-card">
+
+            <span class="skill-icon">◈</span>
+
+            <h3>Microsoft Azure</h3>
+
+            <p>
+              Integrated Azure Database for PostgreSQL
+              with the StockFlow inventory management
+              application, gaining practical experience
+              with cloud-hosted relational databases and
+              application connectivity.
+            </p>
+
+            <div class="proof-links">
+
+              <a href="https://github.com/ThabangRantoka/StockFlow"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                View StockFlow Project ↗
+              </a>
+
+            </div>
+
+          </article>
+
+          <!-- SECURE WEBHOOK INTEGRATION -->
+
+          <article class="skill-card">
+
+            <span class="skill-icon">⌘</span>
+
+            <h3>Secure Webhook Integration</h3>
+
+            <p>
+              Configured GitHub webhooks, Cloudflare Tunnel
+              and a Node.js signature-validation proxy
+              for GitHub-triggered Jenkins automation.
+            </p>
+
+            <div class="proof-links">
+
+              <a href="https://github.com/ThabangRantoka/program-manager-php"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                View Project Repository ↗
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+        <!-- =========================================
+             CI/CD PIPELINE ARCHITECTURE
+             ========================================= -->
+
+        <div class="pipeline-panel">
+
+          <p class="kicker">
+            PROGRAM MANAGER / ARCHITECTURE
+          </p>
+
+          <h3>Two deployment workflows</h3>
+
+          <!-- AWS PIPELINE -->
+
+          <div class="pipeline">
+
+            <h4>
+              AWS Cloud Deployment Pipeline
+            </h4>
+
+            <ol>
+
+              <li>GitHub</li>
+
+              <li>GitHub Actions</li>
+
+              <li>SSH / rsync</li>
+
+              <li>AWS EC2</li>
+
+              <li>Apache / PHP / MySQL</li>
+
+            </ol>
+
+          </div>
+
+          <!-- JENKINS PIPELINE -->
+
+          <div class="pipeline">
+
+            <h4>
+              Jenkins &amp; Docker Automation Pipeline
+            </h4>
+
+            <ol>
+
+              <li>GitHub Webhook</li>
+
+              <li>Cloudflare Tunnel</li>
+
+              <li>Node.js Secure Proxy</li>
+
+              <li>Jenkins</li>
+
+              <li>Docker Compose</li>
+
+            </ol>
+
+          </div>
+
+          <p class="pipeline-note">
+            The AWS cloud deployment and Jenkins container
+            automation workflows demonstrate separate
+            approaches to application deployment, infrastructure
+            management and CI/CD automation.
+          </p>
+
+          <div class="proof-links">
+
+            <a href="https://github.com/ThabangRantoka/program-manager-php"
+               target="_blank"
+               rel="noopener noreferrer">
+              Explore Project Repository ↗
+            </a>
+
+            <a href="https://github.com/ThabangRantoka/program-manager-php/actions"
+               target="_blank"
+               rel="noopener noreferrer">
+              View CI/CD Workflows ↗
+            </a>
+
+            <a href="https://16.28.168.46/app/"
+               target="_blank"
+               rel="noopener noreferrer">
+              AWS Deployment ↗
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =========================================
+         COMPUTER SYSTEMS ENGINEERING
+         ========================================= -->
+
+    <section class="section wrap" id="engineering">
+
+      <div class="section-head">
+
+        <div>
+
+          <p class="kicker">
+            03 / COMPUTER SYSTEMS ENGINEERING
+          </p>
+
+          <h2>
+            Beyond web development<span class="dot">.</span>
+          </h2>
+
+        </div>
+
+        <p>
+          Embedded systems, robotics, electronics and AI.
+        </p>
+
+      </div>
+
+      <div class="skills-grid">
+
+        <!-- EMBEDDED SYSTEMS -->
+
+        <article class="skill-card">
+
+          <span class="skill-icon">⚙</span>
+
+          <h3>Embedded &amp; Electronics</h3>
+
+          <p>
+            8051 Microcontrollers · Assembly · Electronics ·
+            ESP32 · Arduino · Raspberry Pi · PCB Design ·
+            Proteus
+          </p>
+
+        </article>
+
+        <!-- ROBOTICS -->
+
+        <article class="skill-card">
+
+          <span class="skill-icon">◈</span>
+
+          <h3>Robotics &amp; Automation</h3>
+
+          <p>
+            Mobile Robotics · Sensors · PLCs · Digital
+            Process Control · Obstacle Avoidance
+          </p>
+
+        </article>
+
+        <!-- ARTIFICIAL INTELLIGENCE -->
+
+        <article class="skill-card">
+
+          <span class="skill-icon">⌘</span>
+
+          <h3>AI &amp; Development Tools</h3>
+
+          <p>
+            Machine Learning · Unity ML-Agents · Flask ·
+            Embarcadero C++ Builder · GitHub
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- =========================================
+         PROFESSIONAL EXPERIENCE
+         ========================================= -->
+
+    <section class="section experience-section"
+             id="experience">
+
+      <div class="wrap">
+
+        <div class="section-head">
+
+          <div>
+
+            <p class="kicker">04 / EXPERIENCE</p>
+
+            <h2>
+              Where I've contributed<span class="dot">.</span>
+            </h2>
+
+          </div>
+
+        </div>
+
+        <div class="experience-card">
+
+          <div class="experience-side">
+
+            <span class="date">
+              AUG 2025 — AUG 2026
+            </span>
+
+            <span class="location">
+              Randburg, Gauteng
+            </span>
+
+          </div>
+
+          <div>
+
+            <h3>Full Stack Developer Intern</h3>
+
+            <p class="company">
+              MMS Africa (Broadcast Virtualisation Company)
+            </p>
+
+            <ul>
+
+              <li>
+                Built programme management applications
+                using Angular, TypeScript, PHP and MySQL.
+              </li>
+
+              <li>
+                Developed secure APIs with authentication,
+                role-based access, input validation and
+                login rate limiting.
+              </li>
+
+              <li>
+                Implemented user management, password
+                management, audit logging and database
+                migrations.
+              </li>
+
+              <li>
+                Deployed applications on Linux and Apache
+                with HTTPS and backups, using Git/GitHub
+                for version control and documenting
+                testing procedures.
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =========================================
+         FEATURED PROJECTS
+         ========================================= -->
+
+    <section class="section wrap" id="projects">
+
+      <div class="section-head">
+
+        <div>
+
+          <p class="kicker">05 / SELECTED WORK</p>
+
+          <h2>
+            Projects with purpose<span class="dot">.</span>
+          </h2>
+
+        </div>
+
+        <p>
+          Applications focused on useful features,
+          clear data flows and maintainable code.
+        </p>
+
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- =========================================
+             PROJECT 01 — PROGRAM MANAGER
+             ========================================= -->
+
+        <article class="project-card featured">
+
+          <div class="project-top">
+
+            <span class="project-number">
+              01 / FEATURED
+            </span>
+
+            <a class="project-link"
+               href="https://github.com/ThabangRantoka/program-manager-php"
+               target="_blank"
+               rel="noopener noreferrer">
+              GitHub ↗
+            </a>
+
+          </div>
+
+          <div class="project-art art-one">
+
+            <div class="mock-window">
+
+              <div class="mock-top">
+
+                <i></i>
+                <i></i>
+                <i></i>
+
+                <span>Program Manager</span>
+
+              </div>
+
+              <div class="mock-body">
+
+                <div class="mock-sidebar"></div>
+
+                <div class="mock-content">
+
+                  <div class="mock-line wide"></div>
+
+                  <div class="mock-line"></div>
+
+                  <div class="mock-row">
+
+                    <div></div>
+                    <div></div>
+                    <div></div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <h3>
+            Program Manager — Cloud &amp; DevOps
+          </h3>
+
+          <p>
+            Full-stack television scheduling application
+            with Angular, PHP REST APIs and MySQL.
+            Deployed to AWS EC2 and extended with GitHub
+            Actions, Jenkins and Docker Compose automation.
+          </p>
+
+          <!-- PROJECT PROOF LINKS -->
+
+          <div class="proof-links">
+
+            <a href="https://intern1.pfunzo.africa/app/login"
+               target="_blank"
+               rel="noopener noreferrer">
+              Angular Application ↗
+            </a>
+
+            <a href="https://intern1.pfunzo.africa/api/login.php"
+               target="_blank"
+               rel="noopener noreferrer">
+              PHP Application ↗
+            </a>
+
+            <a href="https://16.28.168.46/app/"
+               target="_blank"
+               rel="noopener noreferrer">
+              AWS Deployment ↗
+            </a>
+
+            <a href="https://16.28.168.46/api/index.php"
+               target="_blank"
+               rel="noopener noreferrer">
+              AWS REST API ↗
+            </a>
+
+            <a href="https://github.com/ThabangRantoka/program-manager-php/actions"
+               target="_blank"
+               rel="noopener noreferrer">
+              CI/CD Workflows ↗
+            </a>
+
+            <a href="https://github.com/ThabangRantoka/Program-Manager-Web-Application"
+               target="_blank"
+               rel="noopener noreferrer">
+              Source Code ↗
+            </a>
+
+          </div>
+
+          <div class="tags" style="margin-top: 20px;">
+
+            <span>Angular</span>
+            <span>TypeScript</span>
+            <span>PHP</span>
+            <span>MySQL</span>
+            <span>Linux Server</span>
+            <span>Apache</span>
+            <span>AWS EC2</span>
+            <span>GitHub Actions</span>
+            <span>Jenkins</span>
+            <span>Docker</span>
+            <span>Docker Compose</span>
+            <span>CI/CD</span>
+
+          </div>
+
+        </article>
+
+        <!-- =========================================
+             PROJECT 02 — STOCKFLOW
+             ========================================= -->
+
+        <article class="project-card">
+
+          <div class="project-top">
+
+            <span class="project-number">
+              02 / WEB APPLICATION
+            </span>
+
+            <a class="project-link"
+               href="https://github.com/ThabangRantoka/StockFlow"
+               target="_blank"
+               rel="noopener noreferrer">
+              View on GitHub ↗
+            </a>
+
+          </div>
+
+          <div class="project-art art-two">
+
+            <div class="stock-graphic">
+
+              <div class="graph-title">
+
+                STOCK FLOW
+
+                <span>● LIVE DATA</span>
+
+              </div>
+
+              <div class="bars">
+
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+
+              </div>
+
+              <div class="graph-bottom">
+                INVENTORY / ORDERS / CUSTOMERS
+              </div>
+
+            </div>
+
+          </div>
+
+          <h3>StockFlow</h3>
+
+          <p>
+            Inventory and order management system with
+            REST APIs, relational data models, low-stock
+            tracking and transactional order processing.
+            Includes hands-on Azure PostgreSQL, Docker
+            and Jenkins experience.
+          </p>
+
+          <div class="proof-links">
+
+            <a href="https://github.com/ThabangRantoka/StockFlow"
+               target="_blank"
+               rel="noopener noreferrer">
+              View Source Code ↗
+            </a>
+
+          </div>
+
+          <div class="tags" style="margin-top: 20px;">
+
+            <span>React</span>
+            <span>TypeScript</span>
+            <span>Node.js</span>
+            <span>Express</span>
+            <span>PostgreSQL</span>
+            <span>Azure</span>
+            <span>Docker</span>
+            <span>Jenkins</span>
+
+          </div>
+
+        </article>
+
+        <!-- =========================================
+             PROJECT 03 — OPSFLOW
+             ========================================= -->
+
+        <article class="project-card">
+
+          <div class="project-top">
+
+            <span class="project-number">
+              03 / WEB APPLICATION
+            </span>
+
+            <a class="project-link"
+               href="https://github.com/ThabangRantoka/OpsFlow-Project"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="View Ops Flow on GitHub">
+              View on GitHub ↗
+            </a>
+
+          </div>
+
+          <div class="project-art art-three">
+
+            <div class="ops-graphic">
+
+              <div class="ops-label">
+                OPS FLOW
+              </div>
+
+              <div class="ops-tiles">
+
+                <div>
+                  <b>↗</b>
+                  <small>PROJECTS</small>
+                </div>
+
+                <div>
+                  <b>✓</b>
+                  <small>ATTENDANCE</small>
+                </div>
+
+                <div>
+                  <b>▦</b>
+                  <small>REPORTS</small>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <h3>Ops Flow</h3>
+
+          <p>
+            Operations platform with employee management,
+            attendance, leave workflows, role-based access,
+            KPI dashboards and audit logs.
+          </p>
+
+          <div class="proof-links">
+
+            <a href="https://github.com/ThabangRantoka/OpsFlow-Project"
+               target="_blank"
+               rel="noopener noreferrer">
+              View Source Code ↗
+            </a>
+
+          </div>
+
+          <div class="tags" style="margin-top: 20px;">
+
+            <span>PHP</span>
+            <span>Angular</span>
+            <span>MySQL</span>
+            <span>Git</span>
+
+          </div>
+
+        </article>
+
+        <!-- =========================================
+             PROJECT 04 — FRAME STUDIO
+             ========================================= -->
+
+        <article class="project-card">
+
+          <div class="project-top">
+
+            <span class="project-number">
+              04 / WEB APPLICATION
+            </span>
+
+            <a class="project-link"
+               href="https://frame-studio-portfolio-client.vercel.app"
+               target="_blank"
+               rel="noopener noreferrer">
+              Live Demo ↗
+            </a>
+
+          </div>
+
+          <div class="project-art"
+               style="background: #4b312e;"
+               aria-hidden="true">
+
+            <svg
+              viewBox="0 0 340 190"
+              width="100%"
+              height="100%"
+              focusable="false">
+
+              <rect
+                x="20"
+                y="14"
+                width="300"
+                height="162"
+                rx="12"
+                fill="#211a1c"
+                stroke="#a97663"
+              />
+
+              <text
+                x="42"
+                y="49"
+                fill="#ffddc2"
+                font-size="16"
+                font-weight="700"
+                font-family="sans-serif">
+                FRAME STUDIO
+              </text>
+
+              <rect
+                x="42"
+                y="66"
+                width="256"
+                height="85"
+                rx="6"
+                fill="#b56c59"
+              />
+
+              <circle
+                cx="247"
+                cy="94"
+                r="15"
+                fill="#ffce91"
+              />
+
+              <path
+                d="M42 144 L117 87 L165 129 L204 106 L283 151 H48 Q42 151 42 144Z"
+                fill="#553537"
+              />
+
+              <path
+                d="M100 151 L174 119 L230 143 L263 122 L298 144 Q298 151 292 151Z"
+                fill="#79463f"
+              />
+
+            </svg>
+
+          </div>
+
+          <h3>Frame Studio</h3>
+
+          <p>
+            BrewHaus practicum project: a responsive
+            photography gallery with category filters
+            and a full-size photo viewer. An Express
+            REST API serves photo records from Neon
+            PostgreSQL, and Neon Auth handles signup,
+            sign-in and persistent sessions. The frontend
+            runs on Vercel and the API on Render.
+          </p>
+
+          <div class="proof-links">
+
+            <a href="https://frame-studio-portfolio-client.vercel.app"
+               target="_blank"
+               rel="noopener noreferrer">
+              Live Demo ↗
+            </a>
+
+            <a href="https://github.com/ThabangRantoka/Frame-Studio-PortFolio"
+               target="_blank"
+               rel="noopener noreferrer">
+              Source Code ↗
+            </a>
+
+          </div>
+
+          <div class="tags" style="margin-top: 20px;">
+
+            <span>React</span>
+            <span>Tailwind CSS</span>
+            <span>Node.js</span>
+            <span>Express</span>
+            <span>PostgreSQL</span>
+            <span>Neon Auth</span>
+            <span>Vercel</span>
+            <span>Render</span>
+
+          </div>
+
+        </article>
+
+      </div>
+
+      <!-- MORE GITHUB PROJECTS -->
+
+      <div class="more-projects">
+
+        <p>Want to see more of my work?</p>
+
+        <a href="https://github.com/ThabangRantoka"
+           target="_blank"
+           rel="noopener noreferrer">
+          Browse GitHub repositories ↗
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- =========================================
+         ACADEMIC PROJECT ARCHIVE
+         ========================================= -->
+
+    <section class="section wrap" id="more-work">
+
+      <div class="section-head">
+
+        <div>
+
+          <p class="kicker">
+            06 / PROJECT ARCHIVE
+          </p>
+
+          <h2>
+            More things I've built through my Academic Years
+            <span class="dot">.</span>
+          </h2>
+
+        </div>
+
+        <p>
+          Software, embedded systems, robotics and AI projects.
+        </p>
+
+      </div>
+
+      <div class="projects-grid archive-grid">
+
+        <!-- ESP32 SMART HOME AUTOMATION -->
+
+        <article class="project-card archive-card">
+
+          <div class="project-top">
+
+            <span class="project-number">
+              COMPLETED
+            </span>
+
+            <a class="project-link"
+               href="https://github.com/ThabangRantoka/ESP32-Smart-Home-Automation-System"
+               target="_blank"
+               rel="noopener noreferrer">
+              GitHub ↗
+            </a>
+
+          </div>
+
+          <div class="archive-symbol" aria-hidden="true">
+            ⌘
+          </div>
+
+          <h3>ESP32 Smart Home Automation</h3>
+
+          <p>
+            An ESP32-based smart home automation system
+            running a built-in web server for wireless
+            control of room lighting from any device
+            on the network.
+          </p>
+
+          <div class="tags">
+
+            <span>ESP32</span>
+            <span>C++</span>
+            <span>Embedded Web Server</span>
+
+          </div>
+
+        </article>
+
+        <!-- MUNICIPAL BILLING SYSTEM -->
+
+        <article class="project-card archive-card">
+
+          <div class="project-top">
+
+            <span class="project-number">
+              COMPLETED
+            </span>
+
+            <a class="project-link"
+               href="https://github.com/ThabangRantoka/Municipal-Billing-System"
+               target="_blank"
+               rel="noopener noreferrer">
+              GitHub ↗
+            </a>
+
+          </div>
+
+          <div class="archive-symbol" aria-hidden="true">
+            ⌘
+          </div>
+
+          <h3>Municipal Billing System</h3>
+
+          <p>
+            A desktop Municipal Billing System developed
+            in C++ (Embarcadero C++ Builder) for managing
+            customer billing information, tariffs and
+            service accounts.
+          </p>
+
+          <div class="tags">
+
+            <span>C++</span>
+            <span>C++ Builder</span>
+            <span>Data Structures</span>
+
+          </div>
+
+        </article>
+
+        <!-- ULTRASONIC DISTANCE MEASUREMENT -->
+
+        <article class="project-card archive-card">
+
+          <div class="project-top">
+
+            <span class="project-number">
+              COMPLETED
+            </span>
+
+            <span class="project-status">
+              Project overview
+            </span>
+
+          </div>
+
+          <div class="archive-symbol" aria-hidden="true">
+            ⌘
+          </div>
+
+          <h3>Ultrasonic Distance Measurement</h3>
+
+          <p>
+            An Arduino-based ultrasonic distance measurement
+            system with sensor accuracy analysis for real-time
+            obstacle detection.
+          </p>
+
+          <div class="tags">
+
+            <span>Arduino</span>
+            <span>C++</span>
+            <span>Sensors</span>
+
+          </div>
+
+        </article>
+
+        <!-- AUTONOMOUS MOBILE ROBOT -->
+
+        <article class="project-card archive-card">
+
+          <div class="project-top">
+
+            <span class="project-number">
+              COMPLETED
+            </span>
+
+            <span class="project-status">
+              Project overview
+            </span>
+
+          </div>
+
+          <div class="archive-symbol" aria-hidden="true">
+            ⌘
+          </div>
+
+          <h3>Autonomous Mobile Robot</h3>
+
+          <p>
+            Obstacle-avoidance and wall-following logic
+            implemented on a mobile robot platform
+            for reliable autonomous movement.
+          </p>
+
+          <div class="tags">
+
+            <span>Robotics</span>
+            <span>C++</span>
+            <span>Sensors</span>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- =========================================
+         EDUCATION
+         ========================================= -->
+
+    <section class="section education-section"
+             id="education">
+
+      <div class="wrap">
+
+        <div class="section-head">
+
+          <div>
+
+            <p class="kicker">07 / EDUCATION</p>
+
+            <h2>
+              Academic background<span class="dot">.</span>
+            </h2>
+
+          </div>
+
+        </div>
+
+        <div class="education-grid">
+
+          <!-- TSHWANE UNIVERSITY OF TECHNOLOGY -->
+
+          <article class="experience-card">
+
+            <div class="experience-side">
+
+              <span class="date">
+                JAN 2022 — JUN 2027
+              </span>
+
+            </div>
+
+            <div>
+
+              <h3>
+                Diploma in Computer Systems Engineering
+              </h3>
+
+              <p class="company">
+                Tshwane University of Technology
+              </p>
+
+              <p>
+                Key modules: Software Engineering,
+                Embedded Systems, Programming,
+                Artificial Intelligence, Network Systems,
+                Mobile Robotics, Databases, Digital
+                Process Control, PLCs, Electronics,
+                Operating Systems, Logic Design and
+                Project Design.
+              </p>
+
+            </div>
+
+          </article>
+
+          <!-- HIGH SCHOOL -->
+
+          <article class="experience-card">
+
+            <div class="experience-side">
+
+              <span class="date">
+                JAN 2016 — DEC 2020
+              </span>
+
+            </div>
+
+            <div>
+
+              <h3>
+                National Senior Certificate (Grade 12)
+              </h3>
+
+              <p class="company">
+                George Tladi Technical High School
+              </p>
+
+              <p>
+                Key subjects: Mathematics, Physical Sciences,
+                Mechanical Technology and Engineering
+                Graphics &amp; Design.
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =========================================
+         CERTIFICATES
+         ========================================= -->
+
+    <section class="section wrap" id="certifications">
+
+      <div class="section-head">
+
+        <div>
+
+          <p class="kicker">
+            08 / CREDENTIALS
+          </p>
+
+          <h2>
+            Certificates<span class="dot">.</span>
+          </h2>
+
+        </div>
+
+        <p>
+          Certificates Completed.
+        </p>
+
+      </div>
+
+      <div class="credential-grid">
+
+        <!-- GOOGLE AI ESSENTIALS -->
+
+        <article class="skill-card">
+
+          <span class="skill-icon">✦</span>
+
+          <h3>Google AI Essentials</h3>
+
+          <p>
+            Google AI certificate
+          </p>
+
+        </article>
+
+        <!-- FNB ACADEMY -->
+
+        <article class="skill-card">
+
+          <span class="skill-icon">✦</span>
+
+          <h3>FNB Academy Certificate</h3>
+
+          <p>
+            FNB Academy
+          </p>
+
+        </article>
+
+        <!-- MAYERFELD PRACTICUM -->
+
+        <article class="skill-card">
+
+          <span class="skill-icon">✦</span>
+
+          <h3>Mayerfeld Practicum Program</h3>
+
+          <p>
+            Frontend Development · Mayerfeld Consulting ·
+            Issued 10 Nov 2026
+          </p>
+
+          <a class="cert-link"
+             href="https://credsverse.com/credentials/ab78a1a9-d513-42e2-be80-59e6084eb397?preview=1"
+             target="_blank"
+             rel="noopener noreferrer">
+            Verify credential ↗
+          </a>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- =========================================
+         CONTACT SECTION
+         ========================================= -->
+
+    <section class="section contact-section"
+             id="contact">
+
+      <div class="wrap contact-content">
+
+        <p class="kicker">
+          09 / CONTACT
+        </p>
+
+        <h2>
+          Have an opportunity<br />
+          in mind?
+          <span>Let's connect.</span>
+        </h2>
+
+        <p>
+          I'm interested in Full Stack Developer opportunities
+          where I can contribute and keep growing across
+          software development, cloud computing and DevOps.
+        </p>
+
+        <a class="btn primary"
+           href="mailto:thabangrantoka@gmail.com?subject=Software%20Development%20Opportunity">
+          Email me ↗
+        </a>
+
+        <div class="contact-links">
+
+          <a href="mailto:thabangrantoka@gmail.com">
+            thabangrantoka@gmail.com
+          </a>
+
+          <a href="https://www.linkedin.com/in/moyahabo-thabang-rantoka-95a036275/"
+             target="_blank"
+             rel="noopener noreferrer">
+            LinkedIn ↗
+          </a>
+
+          <a href="https://github.com/ThabangRantoka"
+             target="_blank"
+             rel="noopener noreferrer">
+            GitHub ↗
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- =========================================
+       FOOTER
+       ========================================= -->
+
+  <footer>
+
+    <div class="wrap footer-inner">
+
+      <span>
+        © <span id="year">2026</span>
+        Moyahabo Thabang Rantoka
+      </span>
+
+      <a href="#home">
+        Back to top ↑
       </a>
+
     </div>
-  </article>
 
-  <!-- GITHUB ACTIONS -->
-  <article class="skill-card">
-    <span class="skill-icon">↗</span>
-    <h3>GitHub Actions — CI/CD</h3>
-    <p>
-      Automated application deployment to AWS EC2
-      using GitHub Actions, SSH and rsync.
-    </p>
+  </footer>
 
-    <div class="proof-links">
-      <a href="https://github.com/ThabangRantoka/program-manager-php/actions"
-         target="_blank" rel="noopener noreferrer">
-        View GitHub Actions ↗
-      </a>
-    </div>
-  </article>
+  <!-- =========================================
+       JAVASCRIPT
+       ========================================= -->
 
-  <!-- JENKINS -->
-  <article class="skill-card">
-    <span class="skill-icon">⚙</span>
-    <h3>Jenkins</h3>
-    <p>
-      Configured CI/CD pipelines for automated source
-      checkout, application builds and container deployment.
-    </p>
+  <script src="script.js"></script>
 
-    <div class="proof-links">
-      <a href="https://github.com/ThabangRantoka/program-manager-php"
-         target="_blank" rel="noopener noreferrer">
-        View Project Repository ↗
-      </a>
-    </div>
-  </article>
-
-  <!-- DOCKER -->
-  <article class="skill-card">
-    <span class="skill-icon">▣</span>
-    <h3>Docker &amp; Docker Compose</h3>
-    <p>
-      Containerised Angular, PHP and MySQL services
-      and managed multi-container application environments.
-    </p>
-
-    <div class="proof-links">
-      <a href="https://github.com/ThabangRantoka/program-manager-php"
-         target="_blank" rel="noopener noreferrer">
-        View Source Code ↗
-      </a>
-    </div>
-  </article>
-
-  <!-- MICROSOFT AZURE -->
-  <article class="skill-card">
-    <span class="skill-icon">◈</span>
-    <h3>Microsoft Azure</h3>
-    <p>
-      Integrated Azure Database for PostgreSQL with
-      the StockFlow inventory management application.
-    </p>
-
-    <div class="proof-links">
-      <a href="https://github.com/ThabangRantoka/StockFlow"
-         target="_blank" rel="noopener noreferrer">
-        View StockFlow Project ↗
-      </a>
-    </div>
-  </article>
-
-  <!-- SECURE WEBHOOKS -->
-  <article class="skill-card">
-    <span class="skill-icon">⌘</span>
-    <h3>Secure Webhook Integration</h3>
-    <p>
-      Configured GitHub webhooks, Cloudflare Tunnel
-      and a Node.js signature-validation proxy
-      for Jenkins automation.
-    </p>
-
-    <div class="proof-links">
-      <a href="https://github.com/ThabangRantoka/program-manager-php"
-         target="_blank" rel="noopener noreferrer">
-        View Project Repository ↗
-      </a>
-    </div>
-  </article>
-
-</div>
+</body>
+</html>
